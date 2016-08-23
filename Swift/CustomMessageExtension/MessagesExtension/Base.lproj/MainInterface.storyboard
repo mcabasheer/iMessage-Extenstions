@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-fi-ked">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw8-vv-oIm">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Sw8-vv-oIm" secondAttribute="height" multiplier="11:10" id="2PO-OO-9Ya"/>
+                                    <constraint firstAttribute="width" constant="66" id="XIJ-75-FKK"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="happy.jpg"/>
+                                <connections>
+                                    <action selector="happyClicked:" destination="ObA-dk-sSI" eventType="touchUpInside" id="CZh-N9-uKk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faq-j4-ZBB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="DNZ-Ds-AQO"/>
+                                    <constraint firstAttribute="width" secondItem="faq-j4-ZBB" secondAttribute="height" multiplier="18:19" id="r3s-eJ-2xC"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="sad.jpg"/>
+                                <connections>
+                                    <action selector="sadClicked:" destination="ObA-dk-sSI" eventType="touchUpInside" id="sMb-tc-I2a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kri-yI-4z2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="0ps-sG-wCn"/>
+                                    <constraint firstAttribute="width" secondItem="Kri-yI-4z2" secondAttribute="height" multiplier="19:20" id="wc6-8d-7TI"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="normal.jpg"/>
+                                <connections>
+                                    <action selector="normalClicked:" destination="ObA-dk-sSI" eventType="touchUpInside" id="2rW-Mg-pGs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sw8-vv-oIm" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" constant="6" id="2xk-jj-iav"/>
+                            <constraint firstItem="Sw8-vv-oIm" firstAttribute="top" secondItem="d1e-fi-ked" secondAttribute="bottom" constant="43" id="Em9-85-aNR"/>
+                            <constraint firstItem="d1e-fi-ked" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="GZo-wC-LGP"/>
+                            <constraint firstItem="Kri-yI-4z2" firstAttribute="top" secondItem="d1e-fi-ked" secondAttribute="bottom" constant="34" id="Ldu-PZ-dYZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="faq-j4-ZBB" secondAttribute="trailing" id="O7N-08-mT3"/>
+                            <constraint firstItem="d1e-fi-ked" firstAttribute="centerX" secondItem="Kri-yI-4z2" secondAttribute="centerX" id="RLX-W8-bnp"/>
+                            <constraint firstItem="d1e-fi-ked" firstAttribute="width" secondItem="zMn-AG-sqS" secondAttribute="width" id="jI8-Ai-h3d"/>
+                            <constraint firstItem="faq-j4-ZBB" firstAttribute="top" secondItem="d1e-fi-ked" secondAttribute="bottom" constant="34" id="pRn-Gx-JDC"/>
+                            <constraint firstItem="d1e-fi-ked" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="pXa-vV-FFS"/>
+                            <constraint firstAttribute="centerX" secondItem="d1e-fi-ked" secondAttribute="centerX" id="wFy-hW-Bib"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="138.53073463268368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="happy.jpg" width="206" height="206"/>
+        <image name="normal.jpg" width="512" height="512"/>
+        <image name="sad.jpg" width="206" height="206"/>
+    </resources>
+</document>
